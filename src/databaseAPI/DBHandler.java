@@ -27,7 +27,7 @@ public class DBHandler {
 	private Connection connection;
 	private static final String DBname = "hotel";
 	private static final String user = "root";
-	private static final String password = "mus%^&4545";
+	private static final String password = "";
 	private Statement statement;
 	private Map<String, Object> map;
 
