@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIcon?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="640.0" style="-fx-background-color: #1A363D;" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.controlRecMenu">
+   <children>
+      <JFXButton buttonType="RAISED" focusTraversable="false" layoutX="159.0" layoutY="203.0" onAction="#moveToReserve" prefHeight="39.0" prefWidth="325.0" style="-fx-background-color: #1D252A; -fx-background-radius: 0px 15px 0px 15px;" text="Make Reservation" textFill="#f8f7f7">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </JFXButton>
+      <JFXButton buttonType="RAISED" focusTraversable="false" layoutX="159.0" layoutY="102.0" onAction="#moveToAvailableRooms" prefHeight="39.0" prefWidth="325.0" style="-fx-background-color: #1D252A; -fx-background-radius: 0px 15px 0px 15px;" text="Available Rooms" textFill="#f8f7f7">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </JFXButton>
+      <JFXButton buttonType="RAISED" focusTraversable="false" layoutX="159.0" layoutY="305.0" onAction="#moveToBill" prefHeight="39.0" prefWidth="325.0" style="-fx-background-color: #1D252A; -fx-background-radius: 0px 15px 0px 15px;" text="Pay Bill" textFill="#f8f7f7">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </JFXButton>
+      <Label layoutX="241.0" layoutY="14.0" prefHeight="51.0" prefWidth="160.0" text="Receptionist" textFill="#efc65a">
+         <font>
+            <Font name="System Bold" size="25.0" />
+         </font>
+      </Label>
+      <JFXButton contentDisplay="TOP" layoutX="7.0" layoutY="16.0" onAction="#moveToLogIn" text="Log Out" textFill="#fffbfb">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+         <graphic>
+            <FontAwesomeIcon fill="#fffdfd" iconName="BANK" wrappingWidth="16.14285659790039" />
+         </graphic>
+      </JFXButton>
+   </children>
+</AnchorPane>

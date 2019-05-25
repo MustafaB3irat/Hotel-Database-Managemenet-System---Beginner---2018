@@ -1,0 +1,445 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXRadioButton?>
+<?import com.jfoenix.controls.JFXTabPane?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="440.0" prefWidth="640.0" style="-fx-background-color: #E4BD56;" stylesheets="@style.css" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.ControlEditRooms">
+   <children>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#1f2428" height="25.0" layoutX="-8.0" layoutY="-1.0" stroke="BLACK" strokeType="INSIDE" width="648.0" />
+      <Button layoutX="611.0" layoutY="-4.0" mnemonicParsing="false" onAction="#close" prefHeight="25.0" prefWidth="31.0" style="-fx-background-color: transparent;" text="×" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Button>
+      <Button layoutX="579.0" layoutY="-4.0" mnemonicParsing="false" onAction="#minimize" prefHeight="25.0" prefWidth="31.0" style="-fx-background-color: transparent;" text="-" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Button>
+      <Label layoutX="11.0" layoutY="3.0" text="Edit Rooms!" textFill="#fff7f7" />
+      <JFXTabPane layoutX="-1.0" layoutY="25.0" prefHeight="415.0" prefWidth="640.0">
+         <tabs>
+            <Tab style="-fx-pref-width: 200;" text="INSERT">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <Circle fill="DODGERBLUE" layoutX="38.0" layoutY="340.0" radius="24.0" stroke="#ffc107" strokeType="INSIDE" style="-fx-fill: transparent; -fx-stroke-width: 2px;" />
+                        <Rectangle arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="31.0" layoutX="276.0" layoutY="324.0" stroke="#19333a" strokeType="INSIDE" style="-fx-fill: transparent; -fx-stroke-width: 2px;" width="87.0" />
+                        <VBox layoutX="14.0" layoutY="8.0" prefHeight="308.0" prefWidth="300.0" spacing="60.0">
+                           <children>
+                              <HBox prefHeight="59.0" prefWidth="300.0" spacing="5.0">
+                                 <children>
+                                    <Label text="Room Number#">
+                                       <font>
+                                          <Font name="System Bold" size="14.0" />
+                                       </font>
+                                    </Label>
+                                    <JFXTextField fx:id="insertRoomNum" alignment="CENTER" prefHeight="30.0" prefWidth="179.0">
+                                       <font>
+                                          <Font name="System Bold" size="14.0" />
+                                       </font>
+                                    </JFXTextField>
+                                 </children>
+                                 <padding>
+                                    <Insets bottom="10.0" top="10.0" />
+                                 </padding>
+                              </HBox>
+                              <HBox layoutX="10.0" layoutY="10.0" prefHeight="59.0" prefWidth="300.0" spacing="35.0">
+                                 <children>
+                                    <Label text="Room Class">
+                                       <font>
+                                          <Font name="System Bold" size="14.0" />
+                                       </font>
+                                    </Label>
+                                    <JFXTextField fx:id="insertRoomClass" alignment="CENTER" prefHeight="30.0" prefWidth="179.0">
+                                       <font>
+                                          <Font name="System Bold" size="14.0" />
+                                       </font>
+                                    </JFXTextField>
+                                 </children>
+                                 <padding>
+                                    <Insets bottom="10.0" top="10.0" />
+                                 </padding>
+                              </HBox>
+                              <HBox layoutX="10.0" layoutY="69.0" prefHeight="59.0" prefWidth="300.0" spacing="40.0">
+                                 <children>
+                                    <Label text="Room Size">
+                                       <font>
+                                          <Font name="System Bold" size="14.0" />
+                                       </font>
+                                    </Label>
+                                    <JFXTextField fx:id="insertRoomSize" alignment="CENTER" prefHeight="30.0" prefWidth="179.0">
+                                       <font>
+                                          <Font name="System Bold" size="14.0" />
+                                       </font>
+                                    </JFXTextField>
+                                 </children>
+                                 <padding>
+                                    <Insets bottom="10.0" top="10.0" />
+                                 </padding>
+                              </HBox>
+                           </children>
+                        </VBox>
+                        <VBox layoutX="326.0" layoutY="8.0" prefHeight="311.0" prefWidth="300.0" spacing="60.0">
+                           <children>
+                              <HBox prefHeight="59.0" prefWidth="300.0" spacing="5.0">
+                                 <children>
+                                    <JFXTextField fx:id="insertRoomCost" alignment="CENTER" prefHeight="30.0" prefWidth="179.0">
+                                       <font>
+                                          <Font name="System Bold" size="14.0" />
+                                       </font>
+                                    </JFXTextField>
+                                    <Label text="Room Cost $">
+                                       <font>
+                                          <Font name="System Bold" size="14.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                                 <padding>
+                                    <Insets bottom="10.0" top="10.0" />
+                                 </padding>
+                              </HBox>
+                              <HBox layoutX="10.0" layoutY="10.0" prefHeight="59.0" prefWidth="300.0" spacing="5.0">
+                                 <children>
+                                    <JFXTextField fx:id="insertRoomBeds" alignment="CENTER" prefHeight="30.0" prefWidth="179.0">
+                                       <font>
+                                          <Font name="System Bold" size="14.0" />
+                                       </font>
+                                    </JFXTextField>
+                                    <Label text="Number Of Beds">
+                                       <font>
+                                          <Font name="System Bold" size="14.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                                 <padding>
+                                    <Insets bottom="10.0" top="10.0" />
+                                 </padding>
+                              </HBox>
+                              <HBox layoutX="10.0" layoutY="119.0" prefHeight="59.0" prefWidth="300.0" spacing="5.0">
+                                 <children>
+                                    <JFXTextField fx:id="insertRoomFloor" alignment="CENTER" prefHeight="30.0" prefWidth="179.0">
+                                       <font>
+                                          <Font name="System Bold" size="14.0" />
+                                       </font>
+                                    </JFXTextField>
+                                    <Label text="Floor Number #">
+                                       <font>
+                                          <Font name="System Bold" size="14.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                                 <padding>
+                                    <Insets bottom="10.0" top="10.0" />
+                                 </padding>
+                              </HBox>
+                           </children>
+                        </VBox>
+                        <Separator layoutX="307.0" orientation="VERTICAL" prefHeight="317.0" prefWidth="22.0" style="-fx-background: #19333A;" />
+                        <JFXButton layoutX="286.0" layoutY="325.0" onAction="#insertRoom" text="INSERT">
+                           <font>
+                              <Font name="System Bold" size="14.0" />
+                           </font>
+                        </JFXButton>
+                        <ImageView fitHeight="54.0" fitWidth="42.0" layoutX="17.0" layoutY="319.0" onMouseClicked="#moveToManager" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@back.png" />
+                           </image>
+                        </ImageView>
+                     </children>
+                  </AnchorPane>
+              </content>
+            </Tab>
+            <Tab style="-fx-pref-width: 210;" text="UPDATE">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="313.0" prefWidth="640.0">
+                     <children>
+                        <Rectangle arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="31.0" layoutX="311.0" layoutY="333.0" stroke="#19333a" strokeType="INSIDE" style="-fx-fill: transparent; -fx-stroke-width: 2px;" width="87.0" />
+                        <VBox layoutX="8.0" layoutY="19.0" prefHeight="277.0" prefWidth="300.0" spacing="50.0">
+                           <children>
+                              <HBox prefHeight="59.0" prefWidth="300.0" spacing="5.0">
+                                 <children>
+                                    <Label text="Room Number#">
+                                       <font>
+                                          <Font name="System Bold" size="14.0" />
+                                       </font>
+                                    </Label>
+                                    <JFXTextField fx:id="updateRoomNum" alignment="CENTER" onAction="#getUpdateResult" prefHeight="30.0" prefWidth="179.0">
+                                       <font>
+                                          <Font name="System Bold" size="14.0" />
+                                       </font>
+                                    </JFXTextField>
+                                 </children>
+                                 <padding>
+                                    <Insets bottom="10.0" top="10.0" />
+                                 </padding>
+                              </HBox>
+                              <HBox layoutX="10.0" layoutY="10.0" prefHeight="59.0" prefWidth="300.0" spacing="35.0">
+                                 <children>
+                                    <Label text="Room Class">
+                                       <font>
+                                          <Font name="System Bold" size="14.0" />
+                                       </font>
+                                    </Label>
+                                    <JFXTextField fx:id="updateRoomClass" alignment="CENTER" prefHeight="30.0" prefWidth="179.0">
+                                       <font>
+                                          <Font name="System Bold" size="14.0" />
+                                       </font>
+                                    </JFXTextField>
+                                 </children>
+                                 <padding>
+                                    <Insets bottom="10.0" top="10.0" />
+                                 </padding>
+                              </HBox>
+                              <HBox layoutX="10.0" layoutY="69.0" prefHeight="59.0" prefWidth="300.0" spacing="40.0">
+                                 <children>
+                                    <Label text="Room Size">
+                                       <font>
+                                          <Font name="System Bold" size="14.0" />
+                                       </font>
+                                    </Label>
+                                    <JFXTextField fx:id="updateRoomSize" alignment="CENTER" prefHeight="30.0" prefWidth="179.0">
+                                       <font>
+                                          <Font name="System Bold" size="14.0" />
+                                       </font>
+                                    </JFXTextField>
+                                 </children>
+                                 <padding>
+                                    <Insets bottom="10.0" top="10.0" />
+                                 </padding>
+                              </HBox>
+                           </children>
+                        </VBox>
+                        <VBox layoutX="326.0" layoutY="19.0" prefHeight="278.0" prefWidth="300.0" spacing="50.0">
+                           <children>
+                              <HBox prefHeight="59.0" prefWidth="300.0" spacing="5.0">
+                                 <children>
+                                    <JFXTextField fx:id="updateRoomCost" alignment="CENTER" prefHeight="30.0" prefWidth="179.0">
+                                       <font>
+                                          <Font name="System Bold" size="14.0" />
+                                       </font>
+                                    </JFXTextField>
+                                    <Label text="Room Cost $">
+                                       <font>
+                                          <Font name="System Bold" size="14.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                                 <padding>
+                                    <Insets bottom="10.0" top="10.0" />
+                                 </padding>
+                              </HBox>
+                              <HBox layoutX="10.0" layoutY="10.0" prefHeight="59.0" prefWidth="300.0" spacing="5.0">
+                                 <children>
+                                    <JFXTextField fx:id="updateRoomBeds" alignment="CENTER" prefHeight="30.0" prefWidth="179.0">
+                                       <font>
+                                          <Font name="System Bold" size="14.0" />
+                                       </font>
+                                    </JFXTextField>
+                                    <Label text="Number Of Beds">
+                                       <font>
+                                          <Font name="System Bold" size="14.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                                 <padding>
+                                    <Insets bottom="10.0" top="10.0" />
+                                 </padding>
+                              </HBox>
+                              <HBox layoutX="10.0" layoutY="119.0" prefHeight="59.0" prefWidth="300.0" spacing="5.0">
+                                 <children>
+                                    <JFXTextField fx:id="updateRoomFloor" alignment="CENTER" prefHeight="30.0" prefWidth="179.0">
+                                       <font>
+                                          <Font name="System Bold" size="14.0" />
+                                       </font>
+                                    </JFXTextField>
+                                    <Label text="Floor Number #">
+                                       <font>
+                                          <Font name="System Bold" size="14.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                                 <padding>
+                                    <Insets bottom="10.0" top="10.0" />
+                                 </padding>
+                              </HBox>
+                           </children>
+                        </VBox>
+                        <JFXButton layoutX="318.0" layoutY="334.0" onAction="#updateRoom" text="UPDATE">
+                           <font>
+                              <Font name="System Bold" size="14.0" />
+                           </font>
+                        </JFXButton>
+                        <Separator layoutX="302.0" layoutY="1.0" orientation="VERTICAL" prefHeight="287.0" prefWidth="22.0" style="-fx-background: #19333A;" />
+                        <JFXRadioButton fx:id="A" layoutX="112.0" layoutY="295.0" text="Available">
+                           <font>
+                              <Font name="System Bold" size="14.0" />
+                           </font>
+                           <toggleGroup>
+                              <ToggleGroup fx:id="r" />
+                           </toggleGroup>
+                        </JFXRadioButton>
+                        <JFXRadioButton fx:id="R" layoutX="112.0" layoutY="320.0" text="Reserved" toggleGroup="$r">
+                           <font>
+                              <Font name="System Bold" size="14.0" />
+                           </font>
+                        </JFXRadioButton>
+                        <JFXRadioButton fx:id="U" layoutX="112.0" layoutY="346.0" text="Under Maintenance" toggleGroup="$r">
+                           <font>
+                              <Font name="System Bold" size="14.0" />
+                           </font>
+                        </JFXRadioButton>
+                        <Label layoutX="6.0" layoutY="303.0" text="Room Status">
+                           <font>
+                              <Font name="System Bold" size="14.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </AnchorPane>
+              </content>
+            </Tab>
+            <Tab style="-fx-pref-width: 220;" text="DELETE">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <Rectangle arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="31.0" layoutX="264.0" layoutY="333.0" stroke="#19333a" strokeType="INSIDE" style="-fx-fill: transparent; -fx-stroke-width: 2px;" width="87.0" />
+                        <VBox layoutX="7.0" layoutY="14.0" prefHeight="315.0" prefWidth="300.0" spacing="60.0">
+                           <children>
+                              <HBox prefHeight="59.0" prefWidth="300.0" spacing="5.0">
+                                 <children>
+                                    <Label text="Room Number#">
+                                       <font>
+                                          <Font name="System Bold" size="14.0" />
+                                       </font>
+                                    </Label>
+                                    <JFXTextField fx:id="deleteRoomNum" alignment="CENTER" onAction="#getdeleteResult" prefHeight="30.0" prefWidth="179.0">
+                                       <font>
+                                          <Font name="System Bold" size="14.0" />
+                                       </font>
+                                    </JFXTextField>
+                                 </children>
+                                 <padding>
+                                    <Insets bottom="10.0" top="10.0" />
+                                 </padding>
+                              </HBox>
+                              <HBox layoutX="10.0" layoutY="10.0" prefHeight="59.0" prefWidth="300.0" spacing="35.0">
+                                 <children>
+                                    <Label text="Room Class">
+                                       <font>
+                                          <Font name="System Bold" size="14.0" />
+                                       </font>
+                                    </Label>
+                                    <JFXTextField fx:id="deleteRoomClass" alignment="CENTER" prefHeight="30.0" prefWidth="179.0">
+                                       <font>
+                                          <Font name="System Bold" size="14.0" />
+                                       </font>
+                                    </JFXTextField>
+                                 </children>
+                                 <padding>
+                                    <Insets bottom="10.0" top="10.0" />
+                                 </padding>
+                              </HBox>
+                              <HBox layoutX="10.0" layoutY="69.0" prefHeight="59.0" prefWidth="300.0" spacing="40.0">
+                                 <children>
+                                    <Label text="Room Size">
+                                       <font>
+                                          <Font name="System Bold" size="14.0" />
+                                       </font>
+                                    </Label>
+                                    <JFXTextField fx:id="deleteRoomSize" alignment="CENTER" prefHeight="30.0" prefWidth="179.0">
+                                       <font>
+                                          <Font name="System Bold" size="14.0" />
+                                       </font>
+                                    </JFXTextField>
+                                 </children>
+                                 <padding>
+                                    <Insets bottom="10.0" top="10.0" />
+                                 </padding>
+                              </HBox>
+                           </children>
+                        </VBox>
+                        <VBox layoutX="320.0" layoutY="15.0" prefHeight="314.0" prefWidth="300.0" spacing="60.0">
+                           <children>
+                              <HBox prefHeight="59.0" prefWidth="300.0" spacing="5.0">
+                                 <children>
+                                    <JFXTextField fx:id="deleteRoomCost" alignment="CENTER" prefHeight="30.0" prefWidth="179.0">
+                                       <font>
+                                          <Font name="System Bold" size="14.0" />
+                                       </font>
+                                    </JFXTextField>
+                                    <Label text="Room Cost $">
+                                       <font>
+                                          <Font name="System Bold" size="14.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                                 <padding>
+                                    <Insets bottom="10.0" top="10.0" />
+                                 </padding>
+                              </HBox>
+                              <HBox layoutX="10.0" layoutY="10.0" prefHeight="59.0" prefWidth="300.0" spacing="5.0">
+                                 <children>
+                                    <JFXTextField fx:id="deleteRoomBeds" alignment="CENTER" prefHeight="30.0" prefWidth="179.0">
+                                       <font>
+                                          <Font name="System Bold" size="14.0" />
+                                       </font>
+                                    </JFXTextField>
+                                    <Label text="Number Of Beds">
+                                       <font>
+                                          <Font name="System Bold" size="14.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                                 <padding>
+                                    <Insets bottom="10.0" top="10.0" />
+                                 </padding>
+                              </HBox>
+                              <HBox layoutX="10.0" layoutY="119.0" prefHeight="59.0" prefWidth="300.0" spacing="5.0">
+                                 <children>
+                                    <JFXTextField fx:id="deleteRoomFloor" alignment="CENTER" prefHeight="30.0" prefWidth="179.0">
+                                       <font>
+                                          <Font name="System Bold" size="14.0" />
+                                       </font>
+                                    </JFXTextField>
+                                    <Label text="Floor Number #">
+                                       <font>
+                                          <Font name="System Bold" size="14.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                                 <padding>
+                                    <Insets bottom="10.0" top="10.0" />
+                                 </padding>
+                              </HBox>
+                           </children>
+                        </VBox>
+                        <JFXButton layoutX="274.0" layoutY="334.0" onAction="#deleteRoom" text="DELETE">
+                           <font>
+                              <Font name="System Bold" size="14.0" />
+                           </font>
+                        </JFXButton>
+                        <Separator layoutX="300.0" layoutY="1.0" orientation="VERTICAL" prefHeight="331.0" prefWidth="22.0" style="-fx-background: #19333A;" />
+                     </children>
+                  </AnchorPane>
+              </content>
+            </Tab>
+         </tabs></JFXTabPane>
+   </children>
+</Pane>

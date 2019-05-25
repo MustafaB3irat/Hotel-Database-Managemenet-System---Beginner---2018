@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXPasswordField?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIcon?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="200.0" prefWidth="309.0" style="-fx-background-color: #19333A;" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.ControlLogInConfirmation">
+   <children>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#2e2e2e" height="25.0" layoutX="-1.0" stroke="#2e2e2e" strokeType="INSIDE" width="316.0" />
+      <FontAwesomeIcon fill="#e4bd56" iconName="USER" layoutX="26.0" layoutY="80.0" size="3em" />
+      <JFXTextField fx:id="USERNAME" alignment="CENTER" focusColor="#19333a" layoutX="85.0" layoutY="55.0" prefHeight="25.0" prefWidth="177.0" promptText="Confirm Username" style="-fx-prompt-text-fill: #E4BD56; -fx-text-inner-color: white;" unFocusColor="#e4bd56">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </JFXTextField>
+      <JFXPasswordField fx:id="PASSWORD" alignment="CENTER" focusColor="#19333a" layoutX="85.0" layoutY="120.0" onAction="#confirmLogIn" prefHeight="25.0" prefWidth="177.0" promptText="Confirm Password" style="-fx-prompt-text-fill: #E4BD56; -fx-text-inner-color: white;" unFocusColor="#e4bd56">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </JFXPasswordField>
+      <FontAwesomeIcon fill="#e4bd56" iconName="LOCK" layoutX="28.0" layoutY="143.0" size="3em" />
+      <Label fx:id="incorrect" layoutX="85.0" layoutY="169.0" text="Incorrect Username or Password!" textFill="#ff2f2f" visible="false" />
+   </children>
+</AnchorPane>

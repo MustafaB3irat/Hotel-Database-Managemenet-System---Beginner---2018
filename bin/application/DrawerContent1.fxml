@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIcon?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<VBox fx:id="box" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="191.0" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.ControlHamBurger">
+   <children>
+      <AnchorPane prefHeight="400.0" prefWidth="133.0" style="-fx-background-color: #E4BD56;">
+         <children>
+            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#272d32" height="44.0" layoutY="-3.0" stroke="BLACK" strokeType="INSIDE" width="191.0" />
+            <JFXButton contentDisplay="TOP" layoutX="15.0" layoutY="65.0" onAction="#moveToEmployees" prefHeight="44.0" prefWidth="165.0" text=" Edit Employee">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+               <graphic>
+                  <FontAwesomeIcon iconName="USER" size="2em" />
+               </graphic>
+            </JFXButton>
+            <JFXButton contentDisplay="TOP" layoutX="15.0" layoutY="154.0" onAction="#moveToAvailableRooms" prefHeight="44.0" prefWidth="165.0" text="   Edit Room">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+               <graphic>
+                  <FontAwesomeIcon iconName="BED" size="2em" />
+               </graphic>
+            </JFXButton>
+            <JFXButton contentDisplay="TOP" layoutX="16.0" layoutY="241.0" onAction="#moveToEditClean" prefHeight="44.0" prefWidth="165.0" text=" Clean History">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+               <graphic>
+                  <FontAwesomeIcon iconName="HISTORY" size="2em" />
+               </graphic>
+            </JFXButton>
+            <JFXButton contentDisplay="TOP" layoutX="15.0" layoutY="320.0" onAction="#moveToLogIn" prefHeight="44.0" prefWidth="165.0" text=" Log Out">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+               <graphic>
+                  <FontAwesomeIcon iconName="CLOSE" size="2em" />
+               </graphic>
+            </JFXButton>
+         </children>
+         <opaqueInsets>
+            <Insets />
+         </opaqueInsets>
+      </AnchorPane>
+   </children>
+</VBox>

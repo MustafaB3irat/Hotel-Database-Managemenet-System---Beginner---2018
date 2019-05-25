@@ -1,0 +1,32 @@
+
+.jfx-hamburger-icon {
+	
+	-fx-spacing : 7;
+	
+}
+
+.jfx-hamburger-icon StackPane {
+	
+	-fx-background-color: #E4BD56;
+	-fx-background-radius : 5px;
+	
+}
+
+.tab{
+	
+	-fx-background-color: #19333A;
+	
+}
+
+
+
+.tab-header-background{
+	
+	-fx-background-color: #19333A;
+	
+	
+	
+}
+
+
+	

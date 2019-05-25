@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry exported="true" kind="lib" path="C:/Program Files (x86)/MySQL/Connector J 8.0/mysql-connector-java-8.0.13.jar"/>
+	<classpathentry exported="true" kind="lib" path="E:/jasperreports-6.7.0-project/jasperreports-6.7.0/dist/jasperreports-6.7.0.jar"/>
+	<classpathentry exported="true" kind="lib" path="E:/jasperreports-6.7.0-project/jasperreports-6.7.0/dist/jasperreports-fonts-6.7.0.jar"/>
+	<classpathentry exported="true" kind="lib" path="E:/jasperreports-6.7.0-project/jasperreports-6.7.0/dist/jasperreports-javaflow-6.7.0.jar"/>
+	<classpathentry exported="true" kind="lib" path="E:/HotelDBMS/controlsfx-8.40.14.jar"/>
+	<classpathentry exported="true" kind="lib" path="E:/HotelDBMS/jfoenix-8.0.7.jar"/>
+	<classpathentry exported="true" kind="lib" path="E:/HotelDBMS/fontawesomefx-8.1.jar"/>
+	<classpathentry exported="true" kind="lib" path="E:/HotelDBMS/jfoenix-9.0.6.jar"/>
+	<classpathentry kind="lib" path="C:/Program Files (x86)/MySQL/Connector J 8.0/jfoenix-8.0.1.jar"/>
+	<classpathentry kind="src" path="src"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-1.8"/>
+	<classpathentry kind="con" path="org.eclipse.fx.ide.jdt.core.JAVAFX_CONTAINER"/>
+	<classpathentry exported="true" kind="lib" path="E:/jasperreports-6.7.0-project/jasperreports-6.7.0/ext/functions/target/jasperreports-functions-6.7.0.jar"/>
+	<classpathentry exported="true" kind="lib" path="E:/jasperreports-6.7.0-project/jasperreports-6.7.0/ext/functions/target/jasperreports-functions-6.7.0-sources.jar"/>
+	<classpathentry exported="true" kind="lib" path="E:/HotelDBMS/commons-logging-1.2.jar"/>
+	<classpathentry exported="true" kind="lib" path="E:/HotelDBMS/commons-logging-1.2-javadoc.jar"/>
+	<classpathentry exported="true" kind="lib" path="E:/HotelDBMS/apache-commons.jar"/>
+	<classpathentry exported="true" kind="lib" path="E:/HotelDBMS/commons-digester-2.1.jar"/>
+	<classpathentry exported="true" kind="lib" path="E:/HotelDBMS/joda-time-2.0.jar"/>
+	<classpathentry kind="output" path="bin"/>
+</classpath>

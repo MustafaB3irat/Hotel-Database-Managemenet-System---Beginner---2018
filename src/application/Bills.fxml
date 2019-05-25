@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXDatePicker?>
+<?import com.jfoenix.controls.JFXTabPane?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIcon?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane minHeight="450.0" minWidth="640.0" prefHeight="464.0" prefWidth="900.0" style="-fx-background-color: #E4BD56;" stylesheets="@style.css" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.ControlBills">
+   <children>
+      <JFXTabPane layoutY="24.0" minHeight="440.0" minWidth="640.0" prefHeight="440.0" prefWidth="900.0">
+         <tabs>
+            <Tab style="-fx-pref-width: 220;" text="Bills | Pay">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <Rectangle arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="35.0" layoutX="772.0" layoutY="359.0" stroke="#19333a" strokeType="INSIDE" style="-fx-fill: transparent; -fx-stroke-width: 2px;" width="116.0" />
+                        <JFXButton layoutX="766.0" layoutY="360.0" onAction="#showReport" text="Print Report">
+                           <font>
+                              <Font name="System Bold" size="15.0" />
+                           </font>
+                           <graphic>
+                              <FontAwesomeIcon fill="#19333a" iconName="CHECK" />
+                           </graphic>
+                        </JFXButton>
+                        <Rectangle arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="35.0" layoutX="14.0" layoutY="359.0" stroke="#19333a" strokeType="INSIDE" style="-fx-fill: transparent; -fx-stroke-width: 2px;" width="102.0" />
+                        <Separator layoutY="332.0" prefHeight="33.0" prefWidth="900.0" style="-fx-background: #19333A;" />
+                        <JFXButton layoutX="26.0" layoutY="361.0" onAction="#payBills" text="PAY">
+                           <font>
+                              <Font name="System Bold" size="15.0" />
+                           </font>
+                           <graphic>
+                              <FontAwesomeIcon fill="#19333a" iconName="CHECK" />
+                           </graphic>
+                        </JFXButton>
+                        <JFXTextField fx:id="CNameText" alignment="CENTER" layoutX="317.0" layoutY="14.0" onKeyReleased="#issueBillByClientName" prefHeight="25.0" prefWidth="267.0" promptText="Client Name">
+                           <font>
+                              <Font name="System Bold" size="12.0" />
+                           </font>
+                        </JFXTextField>
+                        <TableView fx:id="PayBillTable" layoutX="7.0" layoutY="62.0" prefHeight="273.0" prefWidth="883.0">
+                          <columns>
+                            <TableColumn fx:id="name" prefWidth="135.0" style="-fx-alignment: CENTER; -fx-font-weight: BOLD;" text="Client Name" />
+                              <TableColumn fx:id="dno" prefWidth="136.0" style="-fx-font-weight: BOLD; -fx-alignment: CENTER;" text="Client Document #" />
+                              <TableColumn fx:id="phone" prefWidth="137.0" style="-fx-font-weight: BOLD; -fx-alignment: CENTER;" text="Client Phone #" />
+                              <TableColumn fx:id="cost" prefWidth="94.0" style="-fx-font-weight: BOLD; -fx-alignment: CENTER;" text="Total Cost" />
+                              <TableColumn fx:id="status" prefWidth="90.0" style="-fx-alignment: CENTER; -fx-font-weight: BOLD;" text="Status" />
+                              <TableColumn fx:id="FromColumn" prefWidth="96.0" style="-fx-font-weight: BOLD; -fx-alignment: CENTER;" text="From" />
+                              <TableColumn fx:id="ToColumn" prefWidth="67.0" style="-fx-font-weight: BOLD; -fx-alignement: CENTER;" text="To" />
+                              <TableColumn fx:id="night" prefWidth="67.0" style="-fx-font-weight: BOLD; -fx-alignment: CENTER;" text="Nights" />
+                              <TableColumn fx:id="RoomNo" prefWidth="60.0" style="-fx-font-weight: BOLD; -fx-alignement: CENTER;" text="Room" />
+                          </columns>
+                        </TableView>
+                     </children>
+                  </AnchorPane>
+              </content>
+            </Tab>
+            <Tab style="-fx-pref-width: 220;" text="Update">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <Rectangle arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="35.0" layoutX="399.0" layoutY="356.0" stroke="#19333a" strokeType="INSIDE" style="-fx-fill: transparent; -fx-stroke-width: 2px;" width="102.0" />
+                        <Separator layoutY="328.0" prefHeight="33.0" prefWidth="900.0" style="-fx-background: #19333A;" />
+                        <JFXButton fx:id="update2" layoutX="400.0" layoutY="358.0" text="UPDATE">
+                           <font>
+                              <Font name="System Bold" size="15.0" />
+                           </font>
+                           <graphic>
+                              <FontAwesomeIcon fill="#19333a" iconName="CHECK" />
+                           </graphic>
+                        </JFXButton>
+                        <JFXTextField fx:id="CName1" alignment="CENTER" layoutX="9.0" layoutY="18.0" onKeyReleased="#issueBillByClientNameUpdate" prefHeight="25.0" prefWidth="267.0" promptText="Client Name">
+                           <font>
+                              <Font name="System Bold" size="12.0" />
+                           </font>
+                        </JFXTextField>
+                                              <TableView fx:id="UpdateBillTable" layoutX="7.0" layoutY="59.0" prefHeight="273.0" prefWidth="886.0">
+                           <columns>
+                              <TableColumn fx:id="CNameColumn1" prefWidth="140.0" style="-fx-alignment: CENTER; -fx-font-weight: BOLD;" text="Client Name" />
+                              <TableColumn fx:id="BillIdColumn1" prefWidth="85.0" style="-fx-font-weight: BOLD; -fx-alignment: CENTER;" text="Bill ID#" />
+                              <TableColumn fx:id="CDocNoColumn1" prefWidth="148.0" style="-fx-font-weight: BOLD; -fx-alignment: CENTER;" text="Client Document #" />
+                              <TableColumn fx:id="CPhoneColumn1" prefWidth="113.0" style="-fx-font-weight: BOLD; -fx-alignment: CENTER;" text="Client Phone #" />
+                              <TableColumn fx:id="NightsColumn1" prefWidth="89.0" style="-fx-font-weight: BOLD; -fx-alignment: CENTER;" text="Nights" />
+                              <TableColumn fx:id="TotalCostColumn1" prefWidth="91.0" style="-fx-font-weight: BOLD; -fx-alignment: CENTER;" text="Paid" />
+                              <TableColumn fx:id="statusColumn1" prefWidth="97.0" style="-fx-alignment: CENTER; -fx-font-weight: BOLD;" text="Status" />
+                              <TableColumn fx:id="DateIssuedColumn1" prefWidth="122.0" style="-fx-font-weight: BOLD; -fx-alignment: CENTER;" text="Date Issued" />
+                           </columns>
+                        </TableView>
+                        <JFXDatePicker fx:id="DateIssued1" defaultColor="#19333a" layoutX="630.0" layoutY="17.0" onAction="#issueBillByDateIssued" prefWidth="267.0" promptText="                              Date Issued" style="-fx-font-weight: BOLD;" />
+                     </children>
+                  </AnchorPane>
+              </content>
+            </Tab>
+            <Tab style="-fx-pref-width: 220;" text="Find">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <Separator layoutX="-1.0" layoutY="348.0" prefHeight="33.0" prefWidth="900.0" style="-fx-background: #19333A;" />
+                        <JFXTextField fx:id="CName2" alignment="CENTER" layoutX="9.0" layoutY="11.0" onKeyReleased="#issueBillByClientNameFind" prefHeight="25.0" prefWidth="250.0" promptText="Client Name">
+                           <font>
+                              <Font name="System Bold" size="12.0" />
+                           </font>
+                        </JFXTextField>
+                  
+                        <TableView fx:id="FindBillTable" layoutX="6.0" layoutY="57.0" prefHeight="273.0" prefWidth="886.0">
+                           <columns>
+                              <TableColumn fx:id="CNameColumn2" prefWidth="140.0" style="-fx-alignment: CENTER; -fx-font-weight: BOLD;" text="Client Name" />
+                              <TableColumn fx:id="BillIdColumn2" prefWidth="85.0" style="-fx-font-weight: BOLD; -fx-alignment: CENTER;" text="Bill ID#" />
+                              <TableColumn fx:id="CDocNoColumn2" prefWidth="163.0" style="-fx-font-weight: BOLD; -fx-alignment: CENTER;" text="Client Document #" />
+                              <TableColumn fx:id="CPhoneColumn2" prefWidth="148.0" style="-fx-font-weight: BOLD; -fx-alignment: CENTER;" text="Client Phone #" />
+                              <TableColumn fx:id="NightsColumn2" prefWidth="79.0" style="-fx-font-weight: BOLD; -fx-alignment: CENTER;" text="Nights" />
+                              <TableColumn fx:id="TotalCostColumn2" prefWidth="79.0" style="-fx-font-weight: BOLD; -fx-alignment: CENTER;" text="Paid" />
+                              <TableColumn fx:id="statusColumn2" prefWidth="86.0" style="-fx-alignment: CENTER; -fx-font-weight: BOLD;" text="Status" />
+                              <TableColumn fx:id="DateIssuedColumn2" prefWidth="105.0" style="-fx-font-weight: BOLD; -fx-alignment: CENTER;" text="Date Issued" />
+                           </columns>
+                        </TableView>
+                        <Label layoutX="441.0" layoutY="15.0" text="OR">
+                           <font>
+                              <Font name="System Bold" size="15.0" />
+                           </font>
+                        </Label>
+                        <JFXDatePicker fx:id="DateIssued2" defaultColor="#19333a" layoutX="637.0" layoutY="10.0" onAction="#issueBillByDateIssuedFind" prefWidth="267.0" promptText="                              Date Issued" style="-fx-font-weight: BOLD;" />
+                     </children>
+                  </AnchorPane>
+              </content>
+            </Tab>
+            <Tab style="-fx-pref-width: 220;" text="Delete">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <Rectangle arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="35.0" layoutX="421.0" layoutY="359.0" stroke="#19333a" strokeType="INSIDE" style="-fx-fill: transparent; -fx-stroke-width: 2px;" width="102.0" />
+                        <Separator layoutY="333.0" prefHeight="33.0" prefWidth="900.0" style="-fx-background: #19333A;" />
+                        <JFXButton layoutX="425.0" layoutY="361.0" onAction="#deleteBill" text="DELETE">
+                           <font>
+                              <Font name="System Bold" size="15.0" />
+                           </font>
+                           <graphic>
+                              <FontAwesomeIcon fill="#19333a" iconName="CHECK" />
+                           </graphic>
+                        </JFXButton>
+                        <JFXTextField fx:id="CName3" alignment="CENTER" layoutX="9.0" layoutY="13.0" onKeyReleased="#issueBillByClientNameDelete" prefHeight="25.0" prefWidth="267.0" promptText="Client Name">
+                           <font>
+                              <Font name="System Bold" size="12.0" />
+                           </font>
+                        </JFXTextField>
+                     
+                        <TableView fx:id="DeleteBillTable" layoutX="6.0" layoutY="52.0" prefHeight="273.0" prefWidth="886.0">
+                           <columns>
+                              <TableColumn fx:id="CNameColumn3" prefWidth="163.0" style="-fx-alignment: CENTER; -fx-font-weight: BOLD;" text="Client Name" />
+                              <TableColumn fx:id="BillIdColumn3" prefWidth="93.0" style="-fx-font-weight: BOLD; -fx-alignment: CENTER;" text="Bill ID#" />
+                              <TableColumn fx:id="CDocNoColumn3" prefWidth="143.0" style="-fx-font-weight: BOLD; -fx-alignment: CENTER;" text="Client Document #" />
+                              <TableColumn fx:id="CPhoneColumn3" prefWidth="125.0" style="-fx-font-weight: BOLD; -fx-alignment: CENTER;" text="Client Phone #" />
+                              <TableColumn fx:id="NightsColumn3" prefWidth="75.0" style="-fx-font-weight: BOLD; -fx-alignment: CENTER;" text="Nights" />
+                              <TableColumn fx:id="TotalCostColumn3" prefWidth="73.0" style="-fx-font-weight: BOLD; -fx-alignment: CENTER;" text="Paid" />
+                              <TableColumn fx:id="statusColumn3" prefWidth="93.0" style="-fx-alignment: CENTER; -fx-font-weight: BOLD;" text="Status" />
+                              <TableColumn fx:id="DateIssuedColumn3" prefWidth="120.0" style="-fx-font-weight: BOLD; -fx-alignment: CENTER;" text="Date Issued" />
+                           </columns>
+                        </TableView>
+                        <Label layoutX="450.0" layoutY="15.0" text="OR">
+                           <font>
+                              <Font name="System Bold" size="15.0" />
+                           </font>
+                        </Label>
+                        <JFXDatePicker fx:id="DateIssued3" defaultColor="#19333a" layoutX="631.0" layoutY="10.0" onAction="#issueBillByDateIssuedDelete" prefWidth="267.0" promptText="                              Date Issued" style="-fx-font-weight: BOLD;" />
+                     </children>
+                  </AnchorPane>
+              </content>
+            </Tab>
+         </tabs></JFXTabPane>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#222b32" height="26.0" layoutY="-1.0" stroke="BLACK" strokeType="INSIDE" style="-fx-stroke: transparent;" width="900.0" />
+      <JFXButton fx:id="close" layoutX="860.0" layoutY="-8.0" onAction="#close" prefHeight="26.0" prefWidth="37.0" text="×" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </JFXButton>
+      <JFXButton layoutX="825.0" layoutY="-8.0" onAction="#minimize" text="-" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </JFXButton>
+      <FontAwesomeIcon fill="#dad2d2" iconName="HOME" layoutX="3.0" layoutY="21.0" onMouseClicked="#moveToRec" size="2em" />
+   </children>
+</AnchorPane>

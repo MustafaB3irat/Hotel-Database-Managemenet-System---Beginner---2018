@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXDatePicker?>
+<?import com.jfoenix.controls.JFXTabPane?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIcon?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="640.0" stylesheets="@style.css" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.controlFinancialData">
+   <children>
+      <JFXTabPane prefHeight="400.0" prefWidth="640.0" style="-fx-background-color: #E4BD56;" styleClass="tab-header-background">
+         <tabs>
+            <Tab style="-fx-background-color: #19333A; -fx-pref-width: 310;" text=" Total Income">
+               <content>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <ImageView fitHeight="201.0" fitWidth="319.0" layoutX="378.0" layoutY="81.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@HOTEL.png" />
+                           </image>
+                        </ImageView>
+                        <ImageView fitHeight="201.0" fitWidth="319.0" layoutX="-59.0" layoutY="81.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@HOTEL.png" />
+                           </image>
+                        </ImageView>
+                        <Rectangle fx:id="totalBox11" arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="45.0" layoutX="448.0" layoutY="25.0" stroke="#19333a" strokeType="INSIDE" style="-fx-fill: transparent; -fx-stroke-width: 3px;" width="178.0" />
+                        <Rectangle fx:id="totalBox1" arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="45.0" layoutX="6.0" layoutY="25.0" stroke="#19333a" strokeType="INSIDE" style="-fx-fill: transparent; -fx-stroke-width: 3px;" width="178.0" />
+                        <Circle fill="DODGERBLUE" layoutX="40.0" layoutY="323.0" radius="25.0" stroke="#ffc107" strokeType="INSIDE" style="-fx-fill: transparent; -fx-stroke-width: 3px;" />
+                        <Rectangle fx:id="totalBox" arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="38.0" layoutX="186.0" layoutY="288.0" stroke="#19333a" strokeType="INSIDE" style="-fx-fill: transparent; -fx-stroke-width: 3px;" visible="false" width="259.0" />
+                        <JFXDatePicker fx:id="from" defaultColor="#19333a" layoutX="14.0" layoutY="33.0" onMouseClicked="#hideFromLabel" />
+                        <JFXDatePicker fx:id="to" defaultColor="#19333a" layoutX="455.0" layoutY="33.0" onAction="#showTotalIncome" onMouseClicked="#hideToLabel" />
+                        <Label fx:id="fromLabel" layoutX="67.0" layoutY="34.0" text="From">
+                           <font>
+                              <Font name="System Bold" size="20.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="toLabel" layoutX="517.0" layoutY="36.0" text="To">
+                           <font>
+                              <Font name="System Bold" size="20.0" />
+                           </font>
+                        </Label>
+                        <TableView fx:id="totalIncomeTable" layoutX="186.0" layoutY="24.0" prefHeight="257.0" prefWidth="258.0" style="-fx-border-width: 2px; -fx-border-color: #19333A;">
+                          <columns>
+                            <TableColumn fx:id="bID" prefWidth="160.0" style="-fx-alignment: CENTER; -fx-font-weight: BOLD;" text="Bill ID" />
+                            <TableColumn fx:id="amount" prefWidth="95.0" style="-fx-alignment: CENTER; -fx-font-weight: BOLD;" text="Amount" />
+                          </columns>
+                        </TableView>
+                        <Label fx:id="total" layoutX="313.0" layoutY="291.0" text="0" visible="false">
+                           <font>
+                              <Font name="System Bold" size="20.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="totalLabel" layoutX="207.0" layoutY="291.0" text="Total:" visible="false">
+                           <font>
+                              <Font name="System Bold" size="20.0" />
+                           </font>
+                        </Label>
+                        <ImageView fitHeight="49.0" fitWidth="43.0" layoutX="19.0" layoutY="302.0" onMouseClicked="#moveToMainMenu" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@back.png" />
+                           </image>
+                        </ImageView>
+                        <Circle fill="DODGERBLUE" layoutX="601.0" layoutY="323.0" radius="25.0" stroke="#ffc107" strokeType="INSIDE" style="-fx-fill: transparent; -fx-stroke-width: 3px;" />
+                        <ImageView fitHeight="39.0" fitWidth="38.0" layoutX="581.0" layoutY="305.0" onMouseClicked="#clearInfo" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@clear.png" />
+                           </image>
+                        </ImageView>
+                     </children>
+                  </AnchorPane>
+               </content>
+               <graphic>
+                  <FontAwesomeIcon fill="#ebdede" iconName="MONEY" textAlignment="CENTER" wrappingWidth="14.14285659790039" />
+               </graphic>
+            </Tab>
+            <Tab style="-fx-background-color: #19333A; -fx-pref-width: 320;" text="Salaries">
+               <content>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <Rectangle arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="41.0" layoutX="261.0" layoutY="302.0" stroke="#19333a" strokeType="INSIDE" style="-fx-fill: transparent; -fx-arc-width: 60; -fx-arc-height: 50; -fx-stroke-width: 4;" width="116.0" />
+                        <TableView fx:id="salaryTable" layoutX="23.0" layoutY="14.0" prefHeight="275.0" prefWidth="595.0" style="-fx-border-width: 2px; -fx-border-color: #19333A;">
+                          <columns>
+                            <TableColumn fx:id="Ename" prefWidth="202.0" style="-fx-alignment: CENTER;" text="Employee Name" />
+                            <TableColumn fx:id="salary" prefWidth="192.0" style="-fx-alignment: CENTER;" text="Salary" />
+                              <TableColumn fx:id="job" prefWidth="197.0" style="-fx-alignment: CENTER;" text="Job Description" />
+                          </columns>
+                        </TableView>
+                        <JFXButton layoutX="270.0" layoutY="302.0" onAction="#showSalaries" text="Renew">
+                           <graphic>
+                              <FontAwesomeIcon iconName="REFRESH" />
+                           </graphic>
+                           <font>
+                              <Font name="System Bold" size="18.0" />
+                           </font>
+                        </JFXButton>
+                        <ImageView fx:id="back1" fitHeight="49.0" fitWidth="43.0" layoutX="18.0" layoutY="300.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@back.png" />
+                           </image>
+                        </ImageView>
+                        <Circle fill="DODGERBLUE" layoutX="39.0" layoutY="321.0" onMouseClicked="#moveToMainMenu" radius="25.0" stroke="#ffc107" strokeType="INSIDE" style="-fx-fill: transparent; -fx-stroke-width: 3px;" />
+                        <Circle fill="DODGERBLUE" layoutX="601.0" layoutY="321.0" radius="25.0" stroke="#ffc107" strokeType="INSIDE" style="-fx-fill: transparent; -fx-stroke-width: 3px;" />
+                        <ImageView fitHeight="39.0" fitWidth="38.0" layoutX="582.0" layoutY="302.0" onMouseClicked="#clearInfoO" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@clear.png" />
+                           </image>
+                        </ImageView>
+                     </children>
+                  </AnchorPane>
+               </content>
+               <graphic>
+                  <FontAwesomeIcon fill="WHITE" iconName="DOLLAR" />
+               </graphic>
+            </Tab>
+         </tabs>
+      </JFXTabPane>
+   </children>
+</AnchorPane>

@@ -1,0 +1,200 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXDatePicker?>
+<?import com.jfoenix.controls.JFXRadioButton?>
+<?import com.jfoenix.controls.JFXTabPane?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIcon?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="450.0" prefWidth="900.0" stylesheets="@style.css" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.ControlReservations">
+   <children>
+      <JFXTabPane layoutY="30.0" minHeight="400.0" minWidth="700.0" prefHeight="421.0" prefWidth="900.0">
+         <tabs>
+            <Tab style="-fx-pref-width: 890; -fx-background-color: #19333A;" text="Reservations">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" style="-fx-background-color: #E4BD56;">
+                     <children>
+                        <JFXTabPane layoutY="7.0" prefHeight="378.0" prefWidth="900.0">
+                           <tabs>
+                              <Tab style="-fx-pref-width: 220;" text="INSERT">
+                                <content>
+                                   <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                       <children>
+                                          <Rectangle arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="31.0" layoutX="629.0" layoutY="275.0" stroke="BLACK" strokeType="INSIDE" style="-fx-fill: transparent; -fx-stroke-width: 2px;" width="110.0" />
+                                          <JFXTextField fx:id="CName" alignment="CENTER" layoutX="71.0" layoutY="20.0" prefHeight="25.0" prefWidth="299.0" promptText="Client Name">
+                                             <font>
+                                                <Font name="System Bold" size="12.0" />
+                                             </font>
+                                          </JFXTextField>
+                                          <JFXTextField fx:id="CPhone" alignment="CENTER" layoutX="71.0" layoutY="83.0" prefHeight="25.0" prefWidth="299.0" promptText="Client Phone  #">
+                                             <font>
+                                                <Font name="System Bold" size="12.0" />
+                                             </font>
+                                          </JFXTextField>
+                                          <JFXTextField fx:id="CEmail" alignment="CENTER" layoutX="72.0" layoutY="141.0" prefHeight="25.0" prefWidth="298.0" promptText="Client Email">
+                                             <font>
+                                                <Font name="System Bold" size="12.0" />
+                                             </font>
+                                          </JFXTextField>
+                                          <JFXTextField fx:id="DocNo" alignment="CENTER" layoutX="66.0" layoutY="278.0" prefHeight="25.0" prefWidth="298.0" promptText="Client Document #">
+                                             <font>
+                                                <Font name="System Bold" size="12.0" />
+                                             </font>
+                                          </JFXTextField>
+                                          <Separator layoutX="447.0" layoutY="1.0" orientation="VERTICAL" prefHeight="340.0" prefWidth="6.0" style="-fx-background: #19333A;" />
+                                          <JFXDatePicker fx:id="CDOB" defaultColor="#19333a" layoutX="534.0" layoutY="80.0" prefHeight="28.0" prefWidth="299.0" promptText="                                   Client DOB" style="-fx-font-weight: BOLD;" />
+                                          <JFXDatePicker fx:id="FromDate" defaultColor="#19333a" layoutX="534.0" layoutY="139.0" prefHeight="28.0" prefWidth="299.0" promptText="                                    From Date" style="-fx-font-weight: BOLD;" />
+                                          <JFXButton layoutX="633.0" layoutY="272.0" onAction="#insertReservation" text="INSERT">
+                                             <font>
+                                                <Font name="System Bold" size="16.0" />
+                                             </font>
+                                             <graphic>
+                                                <FontAwesomeIcon iconName="CHECK" />
+                                             </graphic>
+                                          </JFXButton>
+                                          <Label layoutX="137.0" layoutY="196.0" text="Client Document Type">
+                                             <font>
+                                                <Font name="System Bold" size="16.0" />
+                                             </font>
+                                          </Label>
+                                          <JFXRadioButton fx:id="Passport" layoutX="139.0" layoutY="236.0" text="Passport">
+                                             <font>
+                                                <Font name="System Bold" size="12.0" />
+                                             </font>
+                                             <toggleGroup>
+                                                <ToggleGroup fx:id="r" />
+                                             </toggleGroup>
+                                          </JFXRadioButton>
+                                          <JFXRadioButton fx:id="Hawya" layoutX="237.0" layoutY="236.0" text="Hawya" toggleGroup="$r">
+                                             <font>
+                                                <Font name="System Bold" size="12.0" />
+                                             </font>
+                                          </JFXRadioButton>
+                                          <JFXDatePicker fx:id="ToDate" defaultColor="#19333a" layoutX="534.0" layoutY="199.0" prefHeight="28.0" prefWidth="299.0" promptText="                                       To Date" style="-fx-font-weight: BOLD;" />
+                                          <JFXComboBox fx:id="rNum" layoutX="531.0" layoutY="20.0" onMouseClicked="#showRooms" prefHeight="25.0" prefWidth="294.0" />
+                                       </children></AnchorPane>
+                                </content>
+                              </Tab>
+                              <Tab style="-fx-pref-width: 220;" text="UPDATE">
+                                 <content>
+                                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                       <children>
+                                          <JFXTextField fx:id="UpdateReservationsText" alignment="CENTER" layoutX="367.0" layoutY="6.0" onKeyReleased="#getReservationsUpdate" promptText="Enter Client's Name">
+                                             <font>
+                                                <Font name="System Bold" size="14.0" />
+                                             </font>
+                                          </JFXTextField>
+                                          <TableView fx:id="UpdateReservationsTable" layoutX="7.0" layoutY="45.0" prefHeight="271.0" prefWidth="889.0">
+                                             <columns>
+                                                <TableColumn fx:id="CNameColumn" prefWidth="107.0" style="-fx-alignment: CENTER; -fx-font-weight: BOLD;" text="Client Name" />
+                                                <TableColumn fx:id="CPhoneColumn" prefWidth="86.0" style="-fx-alignment: CENTER; -fx-font-weight: BOLD;" text="Phone" />
+                                                <TableColumn fx:id="CEmailColumn" prefWidth="100.0" style="-fx-alignment: CENTER; -fx-font-weight: BOLD;" text="Email" />
+                                                <TableColumn fx:id="CDocumentType" prefWidth="108.0" style="-fx-alignment: CENTER; -fx-font-weight: BOLD;" text="Document Type" />
+                                                <TableColumn fx:id="CDocumentNo" prefWidth="114.0" style="-fx-alignment: CENTER; -fx-font-weight: BOLD;" text="Document #" />
+                                                <TableColumn fx:id="RecNameColumn" prefWidth="104.0" style="-fx-alignment: CENTER; -fx-font-weight: BOLD;" text="Receptioniest" />
+                                                <TableColumn fx:id="RoomNumberColumn" prefWidth="83.0" style="-fx-alignment: CENTER; -fx-font-weight: BOLD;" text="Room #" />
+                                                <TableColumn fx:id="FromDateColumn" minWidth="0.0" prefWidth="94.0" style="-fx-alignment: CENTER; -fx-font-weight: BOLD;" text="From Date" />
+                                                <TableColumn fx:id="ToDateColumn" prefWidth="91.0" style="-fx-font-weight: BOLD; -fx-alignment: CENTER;" text="To Date" />
+                                             </columns>
+                                          </TableView>
+                                       </children>
+                                    </AnchorPane>
+                                 </content>
+                              </Tab>
+                              <Tab style="-fx-pref-width: 220;" text="DELETE">
+                                <content>
+                                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                       <children>
+                                          <Rectangle arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="24.0" layoutX="382.0" layoutY="309.0" stroke="BLACK" strokeType="INSIDE" style="-fx-fill: transparent; -fx-stroke-width: 2px;" width="72.0" />
+                                          <JFXTextField fx:id="DeleteReservationsText" alignment="CENTER" layoutX="344.0" onKeyReleased="#getReservationsDelete" promptText="Enter  Client's Name">
+                                             <font>
+                                                <Font name="System Bold" size="12.0" />
+                                             </font>
+                                          </JFXTextField>
+                                          <JFXButton layoutX="380.0" layoutY="302.0" onAction="#deleteReservation" text="DELETE">
+                                             <font>
+                                                <Font name="System Bold" size="16.0" />
+                                             </font>
+                                          </JFXButton>
+                                          <TableView fx:id="DeleteReservationsTable" layoutX="5.0" layoutY="34.0" prefHeight="271.0" prefWidth="889.0">
+                                             <columns>
+                                                <TableColumn fx:id="CNameColumn1" prefWidth="107.0" style="-fx-alignment: CENTER; -fx-font-weight: BOLD;" text="Client Name" />
+                                                <TableColumn fx:id="CPhoneColumn1" prefWidth="86.0" style="-fx-alignment: CENTER; -fx-font-weight: BOLD;" text="Phone" />
+                                                <TableColumn fx:id="CEmailColumn1" prefWidth="100.0" style="-fx-alignment: CENTER; -fx-font-weight: BOLD;" text="Email" />
+                                                <TableColumn fx:id="CDocumentType1" prefWidth="108.0" style="-fx-alignment: CENTER; -fx-font-weight: BOLD;" text="Document Type" />
+                                                <TableColumn fx:id="CDocumentNo1" prefWidth="114.0" style="-fx-alignment: CENTER; -fx-font-weight: BOLD;" text="Document #" />
+                                                <TableColumn fx:id="RecNameColumn1" prefWidth="104.0" style="-fx-alignment: CENTER; -fx-font-weight: BOLD;" text="Receptioniest" />
+                                                <TableColumn fx:id="RoomNumberColumn1" prefWidth="83.0" style="-fx-alignment: CENTER; -fx-font-weight: BOLD;" text="Room #" />
+                                                <TableColumn fx:id="FromDateColumn1" minWidth="0.0" prefWidth="94.0" style="-fx-alignment: CENTER; -fx-font-weight: BOLD;" text="From Date" />
+                                                <TableColumn fx:id="ToDateColumn1" prefWidth="91.0" style="-fx-font-weight: BOLD; -fx-alignment: CENTER;" text="To Date" />
+                                             </columns>
+                                          </TableView>
+                                       </children></AnchorPane>
+                                </content>
+                              </Tab>
+                              <Tab style="-fx-pref-width: 220;" text="FIND">
+                                <content>
+                                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                       <children>
+                                          <JFXTextField fx:id="FindReservationsText" alignment="CENTER" layoutX="378.0" layoutY="7.0" onKeyReleased="#getReservationsFind" promptText="Enter Client's Name">
+                                             <font>
+                                                <Font name="System Bold" size="12.0" />
+                                             </font>
+                                          </JFXTextField>
+                                          <TableView fx:id="FindReservationsTable" layoutX="6.0" layoutY="46.0" prefHeight="271.0" prefWidth="889.0">
+                                             <columns>
+                                                <TableColumn fx:id="CNameColumn2" prefWidth="107.0" style="-fx-alignment: CENTER; -fx-font-weight: BOLD;" text="Client Name" />
+                                                <TableColumn fx:id="CPhoneColumn2" prefWidth="86.0" style="-fx-alignment: CENTER; -fx-font-weight: BOLD;" text="Phone" />
+                                                <TableColumn fx:id="CEmailColumn2" prefWidth="100.0" style="-fx-alignment: CENTER; -fx-font-weight: BOLD;" text="Email" />
+                                                <TableColumn fx:id="CDocumentType2" prefWidth="108.0" style="-fx-alignment: CENTER; -fx-font-weight: BOLD;" text="Document Type" />
+                                                <TableColumn fx:id="CDocumentNo2" prefWidth="114.0" style="-fx-alignment: CENTER; -fx-font-weight: BOLD;" text="Document #" />
+                                                <TableColumn fx:id="RecNameColumn2" prefWidth="104.0" style="-fx-alignment: CENTER; -fx-font-weight: BOLD;" text="Receptioniest" />
+                                                <TableColumn fx:id="RoomNumberColumn2" prefWidth="83.0" style="-fx-alignment: CENTER; -fx-font-weight: BOLD;" text="Room #" />
+                                                <TableColumn fx:id="FromDateColumn2" minWidth="0.0" prefWidth="94.0" style="-fx-alignment: CENTER; -fx-font-weight: BOLD;" text="From Date" />
+                                                <TableColumn fx:id="ToDateColumn2" prefWidth="91.0" style="-fx-font-weight: BOLD; -fx-alignment: CENTER;" text="To Date" />
+                                             </columns>
+                                          </TableView>
+                                       </children></AnchorPane>
+                                </content>
+                              </Tab>
+                           </tabs>
+                        </JFXTabPane>
+                     </children>
+                  </AnchorPane>
+              </content>
+               <graphic>
+                  <FontAwesomeIcon fill="WHITE" iconName="MONEY" />
+               </graphic>
+            </Tab>
+         </tabs>
+      </JFXTabPane>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#282828" height="31.0" layoutY="-1.0" stroke="BLACK" strokeType="INSIDE" style="-fx-stroke: transparent;" width="900.0" />
+      <Button layoutX="862.0" layoutY="-6.0" mnemonicParsing="false" onAction="#close" style="-fx-background-color: transparent;" text="×" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Button>
+      <Button layoutX="827.0" layoutY="-5.0" mnemonicParsing="false" onAction="#minimize" style="-fx-background-color: transparent;" text="-" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Button>
+      <FontAwesomeIcon fill="#f2e8e8" iconName="HOME" layoutX="7.0" layoutY="23.0" onMouseClicked="#moveToRec" size="2em">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </FontAwesomeIcon>
+   </children>
+</AnchorPane>

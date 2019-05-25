@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXDatePicker?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="200.0" prefWidth="255.0" style="-fx-background-color: #19333A;" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.ControlBillUpdate">
+   <children>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#2f3132" height="27.0" stroke="#2f3132" strokeType="INSIDE" width="255.0" />
+      <JFXButton fx:id="close" layoutX="219.0" layoutY="-7.0" onAction="#close" text="X" textFill="WHITE">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </JFXButton>
+      <JFXDatePicker fx:id="date_issued" defaultColor="#eaecf5" layoutX="42.0" layoutY="46.0" prefWidth="190.0" promptText="                  Date Issued" stylesheets="@datePickerStyle.css" />
+      <JFXTextField fx:id="amount" alignment="CENTER" focusColor="#eaecf5" layoutX="42.0" layoutY="121.0" onAction="#updateBill" prefHeight="25.0" prefWidth="180.0" promptText="Amount Paid" style="-fx-prompt-text-fill: white; -fx-text-inner-color: white;">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </JFXTextField>
+   </children>
+</AnchorPane>

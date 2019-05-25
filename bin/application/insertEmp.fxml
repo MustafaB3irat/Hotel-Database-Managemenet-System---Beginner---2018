@@ -1,0 +1,269 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXDatePicker?>
+<?import com.jfoenix.controls.JFXPasswordField?>
+<?import com.jfoenix.controls.JFXRadioButton?>
+<?import com.jfoenix.controls.JFXTabPane?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIcon?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="450.0" prefWidth="700.0" stylesheets="@style.css" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.controlEmployees">
+   <children>
+      <JFXTabPane layoutY="30.0" minHeight="400.0" minWidth="700.0" prefHeight="421.0" prefWidth="700.0">
+         <tabs>
+            <Tab style="-fx-pref-width: 690; -fx-background-color: #19333A;" text="Receptionist/Cleaner">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" style="-fx-background-color: #E4BD56;">
+                     <children>
+                        <JFXTabPane layoutY="7.0" prefHeight="378.0" prefWidth="700.0">
+                           <tabs>
+                              <Tab style="-fx-pref-width: 200;" text="INSERT">
+                                <content>
+                                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                       <children>
+                                          <Rectangle arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="48.0" layoutX="446.0" layoutY="284.0" stroke="BLACK" strokeType="INSIDE" style="-fx-fill: transparent; -fx-stroke-width: 2px;" width="137.0" />
+                                          <JFXTextField fx:id="name" alignment="CENTER" layoutX="188.0" layoutY="20.0">
+                                             <font>
+                                                <Font name="System Bold" size="12.0" />
+                                             </font>
+                                          </JFXTextField>
+                                          <JFXTextField fx:id="email" alignment="CENTER" layoutX="188.0" layoutY="83.0">
+                                             <font>
+                                                <Font name="System Bold" size="12.0" />
+                                             </font>
+                                          </JFXTextField>
+                                          <JFXTextField fx:id="phone" alignment="CENTER" layoutX="188.0" layoutY="141.0">
+                                             <font>
+                                                <Font name="System Bold" size="12.0" />
+                                             </font>
+                                          </JFXTextField>
+                                          <JFXTextField fx:id="address" alignment="CENTER" layoutX="188.0" layoutY="194.0">
+                                             <font>
+                                                <Font name="System Bold" size="12.0" />
+                                             </font>
+                                          </JFXTextField>
+                                          <JFXTextField fx:id="salary" alignment="CENTER" layoutX="188.0" layoutY="239.0">
+                                             <font>
+                                                <Font name="System Bold" size="12.0" />
+                                             </font>
+                                          </JFXTextField>
+                                          <Label layoutX="61.0" layoutY="24.0" text="Name:">
+                                             <font>
+                                                <Font name="System Bold" size="16.0" />
+                                             </font>
+                                          </Label>
+                                          <Label layoutX="61.0" layoutY="83.0" text="Email:">
+                                             <font>
+                                                <Font name="System Bold" size="16.0" />
+                                             </font>
+                                          </Label>
+                                          <Label layoutX="61.0" layoutY="141.0" text="Phone No:">
+                                             <font>
+                                                <Font name="System Bold" size="16.0" />
+                                             </font>
+                                          </Label>
+                                          <Label layoutX="61.0" layoutY="194.0" text="Address:">
+                                             <font>
+                                                <Font name="System Bold" size="16.0" />
+                                             </font>
+                                          </Label>
+                                          <Label layoutX="61.0" layoutY="242.0" text="Salary:">
+                                             <font>
+                                                <Font name="System Bold" size="16.0" />
+                                             </font>
+                                          </Label>
+                                          <Separator layoutX="353.0" orientation="VERTICAL" prefHeight="340.0" prefWidth="6.0" style="-fx-background: #19333A;" />
+                                          <JFXTextField fx:id="username" alignment="CENTER" layoutX="514.0" layoutY="20.0">
+                                             <font>
+                                                <Font name="System Bold" size="12.0" />
+                                             </font>
+                                          </JFXTextField>
+                                          <JFXTextField fx:id="rating" alignment="CENTER" layoutX="514.0" layoutY="141.0">
+                                             <font>
+                                                <Font name="System Bold" size="12.0" />
+                                             </font>
+                                          </JFXTextField>
+                                          <Label layoutX="387.0" layoutY="24.0" text="username:">
+                                             <font>
+                                                <Font name="System Bold" size="16.0" />
+                                             </font>
+                                          </Label>
+                                          <Label layoutX="387.0" layoutY="83.0" text="password:">
+                                             <font>
+                                                <Font name="System Bold" size="16.0" />
+                                             </font>
+                                          </Label>
+                                          <Label alignment="CENTER" contentDisplay="RIGHT" layoutX="387.0" layoutY="141.0" text="Rating:" textAlignment="CENTER">
+                                             <font>
+                                                <Font name="System Bold" size="16.0" />
+                                             </font>
+                                          </Label>
+                                          <Label layoutX="387.0" layoutY="194.0" text="DOB:">
+                                             <font>
+                                                <Font name="System Bold" size="16.0" />
+                                             </font>
+                                          </Label>
+                                          <Label layoutX="387.0" layoutY="242.0" text="StartDate:">
+                                             <font>
+                                                <Font name="System Bold" size="16.0" />
+                                             </font>
+                                          </Label>
+                                          <JFXPasswordField fx:id="password" alignment="CENTER" layoutX="514.0" layoutY="83.0">
+                                             <font>
+                                                <Font name="System Bold" size="12.0" />
+                                             </font>
+                                          </JFXPasswordField>
+                                          <JFXDatePicker fx:id="DOB" defaultColor="#19333a" layoutX="514.0" layoutY="193.0" prefHeight="28.0" prefWidth="155.0" />
+                                          <JFXDatePicker fx:id="startDate" defaultColor="#19333a" layoutX="512.0" layoutY="237.0" prefHeight="28.0" prefWidth="155.0" />
+                                          <JFXButton layoutX="461.0" layoutY="288.0" onAction="#insert" text="INSERT">
+                                             <font>
+                                                <Font name="System Bold" size="16.0" />
+                                             </font>
+                                             <graphic>
+                                                <FontAwesomeIcon iconName="CHECK" />
+                                             </graphic>
+                                          </JFXButton>
+                                          <Label layoutX="60.0" layoutY="294.0" text="Job:">
+                                             <font>
+                                                <Font name="System Bold" size="16.0" />
+                                             </font>
+                                          </Label>
+                                          <JFXRadioButton fx:id="rece" layoutX="188.0" layoutY="298.0" text="Rec">
+                                             <font>
+                                                <Font name="System Bold" size="12.0" />
+                                             </font>
+                                             <toggleGroup>
+                                                <ToggleGroup fx:id="r" />
+                                             </toggleGroup>
+                                          </JFXRadioButton>
+                                          <JFXRadioButton fx:id="cleaner" layoutX="261.0" layoutY="298.0" text="Cleaner" toggleGroup="$r">
+                                             <font>
+                                                <Font name="System Bold" size="12.0" />
+                                             </font>
+                                          </JFXRadioButton>
+                                       </children></AnchorPane>
+                                </content>
+                              </Tab>
+                              <Tab style="-fx-pref-width: 200;" text="UPDATE">
+                                 <content>
+                                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                       <children>
+                                          <JFXTextField fx:id="name1" alignment="CENTER" layoutX="266.0" layoutY="6.0" onKeyReleased="#getEmployee" promptText="Enter Employee's Name">
+                                             <font>
+                                                <Font name="System Bold" size="14.0" />
+                                             </font>
+                                          </JFXTextField>
+                                          <TableView fx:id="updateTable" layoutX="7.0" layoutY="45.0" prefHeight="271.0" prefWidth="688.0">
+                                             <columns>
+                                                <TableColumn fx:id="updateName" prefWidth="75.0" style="-fx-alignment: CENTER; -fx-font-weight: BOLD;" text="Name" />
+                                                <TableColumn fx:id="updateId" prefWidth="54.0" style="-fx-alignment: CENTER; -fx-font-weight: BOLD;" text="ID" />
+                                                <TableColumn fx:id="updateEmail" prefWidth="96.0" style="-fx-alignment: CENTER; -fx-font-weight: BOLD;" text="Email" />
+                                                <TableColumn fx:id="updatePhone" prefWidth="90.0" style="-fx-alignment: CENTER; -fx-font-weight: BOLD;" text="Phone" />
+                                                <TableColumn fx:id="updateRating" prefWidth="60.0" style="-fx-alignment: CENTER; -fx-font-weight: BOLD;" text="Rating" />
+                                                <TableColumn fx:id="updateAddress" prefWidth="88.0" style="-fx-alignment: CENTER; -fx-font-weight: BOLD;" text="Address" />
+                                                <TableColumn fx:id="updateSalary" prefWidth="62.0" style="-fx-alignment: CENTER; -fx-font-weight: BOLD;" text="Salary" />
+                                                <TableColumn fx:id="updateStart" prefWidth="81.0" style="-fx-alignment: CENTER; -fx-font-weight: BOLD;" text="Start Date" />
+                                                <TableColumn fx:id="updateEnd" prefWidth="81.0" style="-fx-alignment: CENTER; -fx-font-weight: BOLD;" text="End Date" />
+                                             </columns>
+                                          </TableView>
+                                       </children>
+                                    </AnchorPane>
+                                 </content>
+                              </Tab>
+                              <Tab style="-fx-pref-width: 180;" text="DELETE">
+                                <content>
+                                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                       <children>
+                                          <Rectangle arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="39.0" layoutX="297.0" layoutY="289.0" stroke="BLACK" strokeType="INSIDE" style="-fx-fill: transparent; -fx-stroke-width: 2px;" width="113.0" />
+                                          <JFXTextField fx:id="deleteName1" alignment="CENTER" layoutX="283.0" layoutY="20.0" onKeyReleased="#showDetails" promptText="Enter Employee's Name">
+                                             <font>
+                                                <Font name="System Bold" size="12.0" />
+                                             </font>
+                                          </JFXTextField>
+                                          <TableView fx:id="deleteTable" layoutX="6.0" layoutY="56.0" prefHeight="215.0" prefWidth="688.0">
+                                            <columns>
+                                              <TableColumn fx:id="deleteName" prefWidth="75.0" style="-fx-alignment: CENTER; -fx-font-weight: BOLD;" text="Name" />
+                                              <TableColumn fx:id="deleteId" prefWidth="54.0" style="-fx-alignment: CENTER; -fx-font-weight: BOLD;" text="ID" />
+                                                <TableColumn fx:id="deleteEmail" prefWidth="96.0" style="-fx-alignment: CENTER; -fx-font-weight: BOLD;" text="Email" />
+                                                <TableColumn fx:id="deletePhone" prefWidth="90.0" style="-fx-alignment: CENTER; -fx-font-weight: BOLD;" text="Phone" />
+                                                <TableColumn fx:id="deleteRating" prefWidth="60.0" style="-fx-alignment: CENTER; -fx-font-weight: BOLD;" text="Rating" />
+                                                <TableColumn fx:id="deleteAddress" prefWidth="88.0" style="-fx-alignment: CENTER; -fx-font-weight: BOLD;" text="Address" />
+                                                <TableColumn fx:id="deleteSalary" prefWidth="62.0" style="-fx-alignment: CENTER; -fx-font-weight: BOLD;" text="Salary" />
+                                                <TableColumn fx:id="deleteStartDate" prefWidth="82.0" style="-fx-alignment: CENTER; -fx-font-weight: BOLD;" text="Start Date" />
+                                                <TableColumn fx:id="deleteEndDate" style="-fx-alignment: CENTER; -fx-font-weight: BOLD;" text="End Date" />
+                                            </columns>
+                                          </TableView>
+                                          <JFXButton layoutX="317.0" layoutY="290.0" onAction="#deleteEmp" text="DELETE">
+                                             <font>
+                                                <Font name="System Bold" size="16.0" />
+                                             </font>
+                                          </JFXButton>
+                                       </children></AnchorPane>
+                                </content>
+                              </Tab>
+                              <Tab style="-fx-pref-width: 110;" text="FIND">
+                                <content>
+                                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                       <children>
+                                          <JFXTextField fx:id="findName1" alignment="CENTER" layoutX="272.0" layoutY="14.0" onKeyReleased="#showFindResult" promptText="Enter Employee's Name">
+                                             <font>
+                                                <Font name="System Bold" size="12.0" />
+                                             </font>
+                                          </JFXTextField>
+                                          <TableView fx:id="findTable" layoutX="6.0" layoutY="49.0" prefHeight="271.0" prefWidth="688.0">
+                                             <columns>
+                                                <TableColumn fx:id="findName" prefWidth="75.0" style="-fx-alignment: CENTER; -fx-font-weight: BOLD;" text="Name" />
+                                                <TableColumn fx:id="findId" prefWidth="54.0" style="-fx-alignment: CENTER; -fx-font-weight: BOLD;" text="ID" />
+                                                <TableColumn fx:id="findEmail" prefWidth="96.0" style="-fx-alignment: CENTER; -fx-font-weight: BOLD;" text="Email" />
+                                                <TableColumn fx:id="findPhone" prefWidth="90.0" style="-fx-alignment: CENTER; -fx-font-weight: BOLD;" text="Phone" />
+                                                <TableColumn fx:id="findRating" prefWidth="47.0" style="-fx-alignment: CENTER; -fx-font-weight: BOLD;" text="Rating" />
+                                                <TableColumn fx:id="findAddress" prefWidth="72.0" style="-fx-alignment: CENTER; -fx-font-weight: BOLD;" text="Address" />
+                                                <TableColumn fx:id="findSalary" prefWidth="61.0" style="-fx-alignment: CENTER; -fx-font-weight: BOLD;" text="Salary" />
+                                                <TableColumn fx:id="findStartDate" prefWidth="73.0" style="-fx-alignment: CENTER; -fx-font-weight: BOLD;" text="Start Date" />
+                                                <TableColumn fx:id="findEndDate" prefWidth="63.0" style="-fx-alignment: CENTER; -fx-font-weight: BOLD;" text="End Date" />
+                                                <TableColumn fx:id="JOB" prefWidth="56.0" style="-fx-font-weight: BOLD; -fx-alignment: CENTER;" text="JOB" />
+                                             </columns>
+                                          </TableView>
+                                       </children></AnchorPane>
+                                </content>
+                              </Tab>
+                           </tabs>
+                        </JFXTabPane>
+                     </children>
+                  </AnchorPane>
+              </content>
+               <graphic>
+                  <FontAwesomeIcon fill="WHITE" iconName="MONEY" />
+               </graphic>
+            </Tab>
+         </tabs>
+      </JFXTabPane>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#282828" height="31.0" layoutY="-1.0" stroke="BLACK" strokeType="INSIDE" style="-fx-stroke: transparent;" width="700.0" />
+      <Button layoutX="667.0" layoutY="-6.0" mnemonicParsing="false" onAction="#close" style="-fx-background-color: transparent;" text="×" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Button>
+      <Button layoutX="632.0" layoutY="-5.0" mnemonicParsing="false" onAction="#minimize" style="-fx-background-color: transparent;" text="-" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Button>
+      <FontAwesomeIcon fill="#f2e8e8" iconName="HOME" layoutX="7.0" layoutY="23.0" onMouseClicked="#moveToManager" size="2em">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </FontAwesomeIcon>
+   </children>
+</AnchorPane>
